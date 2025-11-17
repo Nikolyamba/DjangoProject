@@ -6,6 +6,7 @@ class TaskCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = ("id", "type", "payload")
+        read_only_fields = ("id",)
 
 class TaskReadSerializer(serializers.ModelSerializer):
     class Meta:
